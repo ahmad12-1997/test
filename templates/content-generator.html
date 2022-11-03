@@ -1,0 +1,176 @@
+{% extends 'includes/layout.html' %}
+
+
+{% block body %}
+<main class="container">
+  <div class="bg-light p-5 rounded mt-5 ">
+    <h1> Content Generator ️</h1>
+    <p class="lead">
+    This is perfect for people who wants to generate  content that is created by AI technology.
+    </p>
+
+    <h2>Enter the Content that you want to generate</h2>
+    
+    
+    <form class="" action="/content-generator" method="post">
+
+      <div class='row mb-5 "btn-group"'> 
+        <div class="row">
+          
+            <h6 class='col-lg-auto  mt-2 mb-2 '>Select Language</h6>
+            <div class = "col-auto  mt-2 mb-2" >
+              <select name='language' class='form-select'>
+                <option value='60c4eb424660040013ca8a9f' >Arabic</option>
+                <option value= '607adac76f8fe5000c1e636d' >US-English </option>
+                <option value='60eddd5676319d000c81dfc5'>Bulgarian</option>
+                <option value='607adb7b6f8fe5000c1e6375' >French</option>
+                <option value='607ae6531208a9000cb1141c' >Chinese (S)</option>
+                <option value='60f853a39bb0df0013c6a588' >Chinese (T)</option>
+                <option value='60d014e9d6e910001341493a' >Czech</option>
+                <option value='60c653b4bca5d4000cc679e3'>Danish</option>
+                <option value='607adbdf6f8fe5000c1e6378' >Dutch</option>
+                <option value='60ebc3e06f90af000c8b15f3' >Farsi</option>
+                <option value='6159af6d56a355691567ec9d' >Filipino</option>
+                <option value='60c65338bca5d4000cc679dd' >Finnish</option>
+                <option value='607adb536f8fe5000c1e6374' >German</option>
+                <option value='607adc966f8fe5000c1e637d' >Greek</option>
+                <option value='607c7c211ebe15000cbbc7b8' >Hebrew</option>
+                <option value='60ce30891d63cb0013838dfb'>Hindi</option>
+                <option value='6102aa33280cab000c673c2f' >Hungarian</option>
+                <option value='607adb7b6f8fe5000c1e6375' >French</option>
+                <option value='6094f9b4addddd000c04c94b' >Indonesian</option>
+                <option value='607adb996f8fe5000c1e6376' >Italian</option>
+                <option value='607adc3d6f8fe5000c1e637b' >Japanese</option>
+                <option value='607adc716f8fe5000c1e637c' >Korean</option>
+                <option value='6198d279d3a709c29634bb26'>Lithuanian</option>
+                <option value='60ef33e9c218d0000c2eb058' >Malay</option>
+                <option value='607db96c182478000c9ac2d9' >Norwegian</option>
+                <option value='607adc056f8fe5000c1e6379' >Polish</option>
+                <option value='607adbb56f8fe5000c1e6377' >Portuguese</option>
+                <option value='609fdbec6cc23d000c7c5e84' >Romanian</option>
+                <option value='607adc2f6f8fe5000c1e637a' >Russian</option>
+                <option value='614a2cc9c1babef3e4008d48' >Slovak</option>
+                <option value='63309f451a3a1324049f8fac' >Slovenian</option>
+                <option value= '607adad66f8fe5000c1e636e' >Spanish</option>
+                <option value='6081b157f580d2000c1baf2c'>Swedish</option>
+                <option value='607c7bec1ebe15000cbbc7b7' >Thai</option>
+                <option value='60a4c3d60b2ef9000ce86d01'>Turkish</option>
+                <option value= '633c17ed746d4421d9656837' >Ukrainian</option>
+                <option value='60c65522bca5d4000cc679fa'>Vietnamese</option>
+               
+              </select>  
+            </div> 
+        
+           
+          
+            <h6 class='col-auto  mt-2 mb-2 offset-1' >Select Tone</h6>
+            <div class = "col-auto mt-2 mb-2" >
+              <select name='toneId' class='form-select'>
+                <option value='6058207530f7b1000c1c4f86' >Appreciative </option>
+                <option value='6058209c30f7b1000c1c4f88' >Assertive</option>
+                <option value='6058223630f7b1000c1c4f96' >Awestruck</option>
+                <option value='605820c030f7b1000c1c4f89' >Candid </option>
+                <option value='60572a639bdd4272b8fe358a' >Casual </option>
+                <option value='605820d430f7b1000c1c4f8a' >Cautionary</option>
+                <option value='605820e330f7b1000c1c4f8b' >Compassionate </option>
+                <option value= '60572a639bdd4272b8fe358b' >Convincing</option>
+                <option value='60e96f6992161b0013c6ae4a' >Critical</option>
+                <option value='6058212830f7b1000c1c4f8d' >Earnest</option>
+                <option value='6058213830f7b1000c1c4f8e' >Enthusiastic </option>
+                <option value='6058200830f7b1000c1c4f85' >Formal</option>
+                <option value='60572a649bdd4272b8fe358c' >Funny</option>
+                <option value='6058215930f7b1000c1c4f8f'>Humble</option>
+                <option value='6058216730f7b1000c1c4f90' >Humorous</option>
+                <option value='60ff8d3afc873e000c08e8b2'>Informative </option>
+                <option value='6064c6679bde74000cea994c'>Inspirational </option>
+                <option value='6058219030f7b1000c1c4f92'>Joyful </option>
+                <option value='6058208730f7b1000c1c4f87' >Passionate</option>
+                <option value='605821c030f7b1000c1c4f93'>Thoughtful</option>
+                <option value= '605821cc30f7b1000c1c4f94'>Urgent</option>
+                <option value='605821e030f7b1000c1c4f95' >Worried</option>
+                
+                
+              </select>  
+             
+            </div>
+
+           <div class= col-8 >
+
+            <h6 class='col-6  mt-2 mb-2 '>Select Content Type</h6>
+            <div class = "col-auto  mt-2 mb-2" >
+              <select name='ContentType' class='form-select'>
+                <option value= '60a40cf5da9d76000ccc2828' >Blog Idea & Outline</option>
+                <option value= '60584cf2c2cdaa000c2a7954' >Blog Section Writing</option>
+                <option value='61e0224822cc129b33031a80'>Brand Name</option>
+                <option value='6062df03e20e7d000c15609b' > Business Idea Pitch</option>
+                <option value='61e1167527174a50fdcb55e3' >Business Ideas</option>
+                <option value= '61e01c2d5b9c5f0d9d795319' >Call To Action</option>
+                <option value='60d19b16d63485000cab8c15' >Copywriting Framework: AIDA</option>
+                <option value='60d1ac3e548c6b000c8fce5b'>Copywriting Framework: PAS</option>
+                <option value='630dcc0f18bdda26b7d415b4' > Cover Letter</option>
+                <option value='60572a629bdd4272b8fe3588' > Email</option>
+                <option value= '60572a629bdd4272b8fe3585' >Facebook, Twitter, LinkedIn Ads</option>
+                <option value='6163f3445bb5990332c018b1' >Google Search Ads</option>
+                <option value='6058693ccdebbb000c210588' >Interview Questions</option>
+                <option value='60586b31cdebbb000c21058d' > Job Description</option>
+                <option value='62ff712ba30cbb98deef0b7d' >Keywords Extractor</option>
+                <option value= '62ff6dd6a30cbb98deed9fdc'>Keywords Generator</option>
+                <option value='605835258c0a4a000c69c962' >Landing Page & Website Copies</option>
+                <option value='60ed7113732a5b000cf99e8e' >Magic Comman'</option>
+                <option value='6062d819be972a000c6a05a3' >Post & Caption Ideas</option>
+                <option value='605832f78c0a4a000c69c960' > Product Description</option>
+                <option value='60bb65ca12ba07000cdc8f64' > Product Description (bullet points)</option>
+                <option value='60633095de064b000c8f5cc8' >Profile Bio</option>
+                <option value='611e2a98045b460ef10242ce'>Question & Answer</option>
+                <option value='611e40d404b47fc3a2297a37' >Reply to Reviews & Messages</option>
+                <option value='60583ac98c0a4a000c69c96f' >SEO Meta Description</option>
+                <option value='60583a058c0a4a000c69c96d' >SEO Meta Title</option>
+                <option value='6163fe7b1d5d06c1e9693346'>SMS & Notifications</option>
+                <option value='60e6f4316ab0b5000c848c51' >Song Lyrics</option>
+                <option value='60cdad891d63cb00138240d3' >Story Plot</option>
+                <option value='605838118c0a4a000c69c968' >Tagline & Headline</option>
+                <option value='607c7ae91ebe15000cbbc7af' >Testimonial & Review</option>
+                <option value= '6092917aa9c7620013304f43' >Text Editing: Append Content</option>
+                <option value='6223abf9ea8eb61e65b4e691'>'Text Editing: Continue Writing</option>
+                <option value='60928e45a9c7620013304f11'>Text Editing: Expand Content</option>
+                <option value='60cdd8b61d63cb001382a390'>Text Editing: Improve Content</option>
+                <option value=  '60b877a110f2fb000cb004eb'>Text Editing: Paragraph Content</option>
+                <option value='60928476a9c7620013304e89'>Text Editing:Reword</option>
+                <option value= '60928752a9c7620013304ea1' >Text Editing: Shorten Content</option>
+                <option value='605856eec2cdaa000c2a7965'>Video Channel Description</option>
+                <option value='6058536ec2cdaa000c2a795e'>Video Description</option>
+                <option value='60584ffdc2cdaa000c2a7957'>Video Idea</option>
+                
+               
+              </select>  
+            </div> 
+          </div>
+
+        
+        
+
+      <div class="mb-3  mt-2 col-md-8 " >
+        <label class="form-label" for='contentgenerator'>Key Points</label>
+        <input type="text" class="form-control " name="contentgenerator" placeholder="eg. Hi , My Name is Jack">
+        <div class="form-text">Writing Specific Key Points will help AI to generate better recommendation </div>
+      </div>
+      <div class= 'col-8'>
+      <button type="submit" class="btn btn-outline-success btn-lg"> GET RECOMMENDATIONS</button>
+    </div>
+    </form>
+  </div>
+
+
+  <div class="p-3 rounded ">
+    <div class="row">
+      <div class="col-lg-12">
+        <h3 class="text-primary">{{prompt}}</h3>
+        <p class="lead">{{openAIAnswer|safe}}</p>
+
+      </div>
+    </div>
+  </div>
+
+ 
+</main>
+{% endblock %}
