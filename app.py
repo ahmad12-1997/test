@@ -2,12 +2,17 @@ from flask import Flask, render_template, request
 import config
 import aicontent
 import ryteapi
+from flask_ckeditor import CKEditor
+from flask_ckeditor import CKEditorField
+from wtforms import StringField, SubmitField
+
 
 def page_not_found(e):
   return render_template('404.html'), 404
 
 
 app = Flask(__name__)
+ckeditor = CKEditor(app)
 app.config.from_object(config.config['development'])
 app.register_error_handler(404, page_not_found)
 
