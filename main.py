@@ -11,24 +11,24 @@ def page_not_found(e):
   return render_template('404.html'), 404
 
 
-app = Flask(__name__)
-ckeditor = CKEditor(app)
-app.config.from_object(config.config['development'])
-app.register_error_handler(404, page_not_found)
+main = Flask(__name__)
+ckeditor = CKEditor(main)
+main.config.from_object(config.config['development'])
+main.register_error_handler(404, page_not_found)
 
 
-@app.route('/', methods=["GET", "POST"])
+@main.route('/', methods=["GET", "POST"])
 def index():
     return render_template('index.html', **locals())
 
-@app.route('/profile', methods=["GET", "POST"])
+@main.route('/profile', methods=["GET", "POST"])
 def profile():
     return render_template('profile.html', **locals())
 
 
 
 
-@app.route('/content-generator', methods=["GET", "POST"])
+@main.route('/content-generator', methods=["GET", "POST"])
 def contentgenerator():
       
     if request.method == 'POST':
@@ -54,8 +54,13 @@ def contentgenerator():
         useCaseIdMagicCommand,
         inputContexts
       )  
-        openAIAnswer = openAIAnswer_unformatted[0]['text']
-        print(openAIAnswer)     
+        openAIAnswer1 = openAIAnswer_unformatted[0]['text']
+        if len(openAIAnswer1) > 2 :
+            openAIAnswer = openAIAnswer1
+            print(openAIAnswer)  
+        else:
+            openAIAnswer ='AI Couldnot Generate an Answer for You , Please Try Again'
+            print(openAIAnswer)   
         
         prompt = 'AI Suggestions are:'
     return render_template('content-generator.html', **locals())
@@ -63,6 +68,6 @@ def contentgenerator():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port='8888', debug=True)
+    main.run(host='0.0.0.0', port='5000', debug=True)
 
 
